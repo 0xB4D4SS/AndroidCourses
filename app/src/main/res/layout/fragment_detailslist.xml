@@ -8,65 +8,75 @@
 
     <ImageView
         android:id="@+id/detailedContactImage"
-        android:layout_width="134dp"
-        android:layout_height="120dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+        app:srcCompat="@android:mipmap/sym_def_app_icon" />
 
     <TextView
         android:id="@+id/detailedContactName"
-        android:layout_width="275dp"
-        android:layout_height="55dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/contact_name"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/detailedContactImage"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/detailedContactPhoneNum"
-        android:layout_width="409dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/phone_number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailedContactImage" />
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/detailedContactImage"
+        app:layout_constraintTop_toBottomOf="@+id/detailedContactName" />
 
     <TextView
         android:id="@+id/detailedContactPhoneNum2"
-        android:layout_width="409dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/second_phone_number"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailedContactPhoneNum" />
 
     <TextView
         android:id="@+id/detailedContactEmail"
-        android:layout_width="409dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/email"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailedContactPhoneNum2" />
 
     <TextView
         android:id="@+id/detailedContactEmail2"
-        android:layout_width="409dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/second_email"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailedContactEmail" />
 
     <TextView
         android:id="@+id/detailedContactDescription"
-        android:layout_width="409dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/description"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailedContactEmail2" />
 

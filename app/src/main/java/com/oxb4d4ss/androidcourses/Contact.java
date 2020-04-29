@@ -1,8 +1,8 @@
 package com.oxb4d4ss.androidcourses;
 
 public class Contact {
-    private String name;
-    private String phoneNum;
+    final private String name;
+    final private String phoneNum;
 
     Contact(String name, String phoneNum) {
         this.name = name;
