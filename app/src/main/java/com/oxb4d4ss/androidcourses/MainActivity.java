@@ -2,6 +2,7 @@ package com.oxb4d4ss.androidcourses;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
@@ -10,5 +11,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ContactListFragment contactListFragment = new ContactListFragment();
+        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.fragmentLayout, contactListFragment);
+        fragmentTransaction.commit();
     }
+
+
 }
