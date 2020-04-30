@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AndroidCourses</string>
+    <string name="contactlist_name">Contact name</string>
+    <string name="contactlist_number">Contact number</string>
+    <string name="contactlist_image">Contact image</string>
+    <string name="second_email">Second e-mail</string>
+    <string name="description">Description</string>
+    <string name="email">E-mail</string>
+    <string name="second_phone_number">Second phone number</string>
+    <string name="phone_number">Phone number</string>
+    <string name="contact_name">Name</string>
 </resources>
