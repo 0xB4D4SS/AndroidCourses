@@ -1,7 +1,6 @@
 package com.oxb4d4ss.androidcourses;
 
 import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,8 +26,24 @@ public class ContactDetailsFragment extends Fragment {
         int i = this.getArguments().getInt("index");
         TextView detailedContactName = (TextView) view.findViewById(R.id.detailedContactName);
         TextView detailedContactPhoneNum = (TextView) view.findViewById(R.id.detailedContactPhoneNum);
-        detailedContactName.setText(ContactListFragment.contacts[i].getName());
-        detailedContactPhoneNum.setText(ContactListFragment.contacts[i].getPhoneNum());
+        TextView detailedContactPhoneNum2 = (TextView) view.findViewById(R.id.detailedContactPhoneNum2);
+        TextView detailedContactEmail = (TextView) view.findViewById(R.id.detailedContactEmail);
+        TextView detailedContactEmail2 = (TextView) view.findViewById(R.id.detailedContactEmail2);
+        TextView detailedContactDescription = (TextView) view.findViewById(R.id.detailedContactDescription);
+        detailedContactName.setText(ContactsService.getDetailedContact(i).getName());
+        detailedContactPhoneNum.setText(ContactsService.getDetailedContact(i).getPhoneNum());
+        if (ContactsService.getDetailedContact(i).getPhoneNum2() != null) {
+            detailedContactPhoneNum2.setText(ContactsService.getDetailedContact(i).getPhoneNum2());
+        }
+        if (ContactsService.getDetailedContact(i).getEmail() != null) {
+            detailedContactEmail.setText(ContactsService.getDetailedContact(i).getEmail());
+        }
+        if (ContactsService.getDetailedContact(i).getEmail2() != null) {
+            detailedContactEmail2.setText(ContactsService.getDetailedContact(i).getEmail2());
+        }
+        if (ContactsService.getDetailedContact(i).getDescription() != null) {
+            detailedContactDescription.setText(ContactsService.getDetailedContact(i).getDescription());
+        }
         return view;
     }
 

@@ -17,6 +17,15 @@
             </intent-filter>
 
         </activity>
+        <service
+            android:directBootAware="true"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"
+            android:isolatedProcess="false"
+            android:label="@string/contacts_service"
+            android:name="com.oxb4d4ss.androidcourses.ContactsService" >
+        </service>
 
     </application>
 </manifest>

@@ -1,12 +1,9 @@
 package com.oxb4d4ss.androidcourses;
 
 import android.annotation.SuppressLint;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.app.ListFragment;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -19,33 +16,28 @@ import androidx.annotation.Nullable;
 
 public class ContactListFragment extends ListFragment {
 
-    static final Contact[] contacts = {
-            new Contact("Ivanov Ivan", "+1234567890"),
-            new Contact("Petrov Petr", "+9876543210")
-    };
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getActivity().setTitle("Contact List");
+            ArrayAdapter<Contact> contactAdapter = new ArrayAdapter<Contact>(getActivity(), 0, ContactsService.getContacts()) {
+                @SuppressLint("NewApi")
+                @NonNull
+                @Override
+                public View getView(int i, @Nullable View convertView, @NonNull ViewGroup parent) {
+                    if (convertView == null) {
+                        convertView = getLayoutInflater().inflate(R.layout.fragment_contactlist, null, false);
+                    }
+                    TextView contactName = (TextView) convertView.findViewById(R.id.contactName);
+                    TextView contactNum = (TextView) convertView.findViewById(R.id.contactNum);
 
-        ArrayAdapter<Contact> contactAdapter = new ArrayAdapter<Contact>(getActivity(), 0, contacts) {
-            @SuppressLint("NewApi")
-            @NonNull
-            @Override
-            public View getView(int i, @Nullable View convertView, @NonNull ViewGroup parent) {
-                if (convertView == null) {
-                    convertView = getLayoutInflater().inflate(R.layout.fragment_contactlist, null, false);
+                    Contact currContact = ContactsService.getDetailedContact(i);
+                    contactName.setText(currContact.getName());
+                    contactNum.setText(currContact.getPhoneNum());
+
+                    return convertView;
                 }
-                TextView contactName = (TextView) convertView.findViewById(R.id.contactName);
-                TextView contactNum = (TextView) convertView.findViewById(R.id.contactNum);
-
-                Contact currContact = contacts[i];
-                contactName.setText(currContact.getName());
-                contactNum.setText(currContact.getPhoneNum());
-
-                return convertView;
-            }
-        };
+            };
         setListAdapter(contactAdapter);
 
     }
@@ -63,4 +55,5 @@ public class ContactListFragment extends ListFragment {
         getActivity().setTitle("Contact List");
 
     }
+
 }
