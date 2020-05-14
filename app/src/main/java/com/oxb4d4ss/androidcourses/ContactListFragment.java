@@ -87,6 +87,12 @@ public class ContactListFragment extends ListFragment {
     }
 
     @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        view = null;
+    }
+
+    @Override
     public void onResume () {
         super.onResume();
         getActivity().setTitle("Contact List");

@@ -94,6 +94,11 @@ public class ContactDetailsFragment extends Fragment {
         super.onDestroyView();
         detailedContactName = null;
         detailedContactPhoneNum = null;
+        detailedContactPhoneNum2 = null;
+        detailedContactEmail = null;
+        detailedContactEmail2 = null;
+        detailedContactBday = null;
+        detailedContactDescription = null;
     }
 
 }
