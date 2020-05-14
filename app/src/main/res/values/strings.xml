@@ -9,5 +9,6 @@
     <string name="second_phone_number">Second phone number</string>
     <string name="phone_number">Phone number</string>
     <string name="contact_name">Name</string>
-    <string name="contacts_service">Contacts Service</string>
+    <string name="birthday">Birthday</string>
+    <string name="notify_about_birthday">Notify about birthday</string>
 </resources>
