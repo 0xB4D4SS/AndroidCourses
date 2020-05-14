@@ -17,6 +17,9 @@
             </intent-filter>
 
         </activity>
+        <service
+            android:name="com.oxb4d4ss.androidcourses.ContactsService" >
+        </service>
 
     </application>
 </manifest>
